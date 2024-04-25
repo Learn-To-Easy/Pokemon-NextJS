@@ -2,8 +2,7 @@ import usePokemon from "@/hooks/usePokemon";
 import React from "react";
 import { typeColors } from '@/utils/pokemon';
 
-const typePokemon = ({params}) => {
-    const { id } = params;
+const typePokemon = ({id}) => {
     const { pokemonDetail } = usePokemon(id);
 
   return (

@@ -21,19 +21,19 @@ export default function Pokemon({ params }) {
     {pokemonDetail.types &&
             pokemonDetail.types.length > 0 && (
       <div style={{ backgroundColor: typeColors[pokemonDetail.types[0].type.name]}}>
-        <Title params={params}/>
-        <ImageDetail params={params}/>
+        <Title id={id}/>
+        <ImageDetail id={id}/>
         <div className="relative flex flex-col pt-20 pb-5 pl-5 pr-5 mx-[25%] bg-white rounded-lg shadow-inner">
-          <TypePokemon params={params}/>
+          <TypePokemon id={id}/>
           <p className="mt-8 text-sm font-bold text-center" style={{ color: typeColors[pokemonDetail.types[0].type.name]}}>
             About
           </p>
-          <DetailPokemon params={params}/>
-          <Description params={params}/>
+          <DetailPokemon id={id}/>
+          <Description id={id}/>
           <p className="mt-12 text-lg font-bold text-center text-black" style={{ color: typeColors[pokemonDetail.types[0].type.name]}}>
             Base Stats
           </p>
-          <StatsPokemon params={params}/>
+          <StatsPokemon id={id}/>
         </div>
         <Image
           className="absolute top-2 right-2 opacity-10"

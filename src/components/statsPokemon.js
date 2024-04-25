@@ -2,8 +2,7 @@ import usePokemon from '@/hooks/usePokemon';
 import React from 'react'
 import { statChangeName, typeColors } from '@/utils/pokemon';
 
-const statsPokemon = ({params}) => {
-    const { id } = params;
+const statsPokemon = ({ id }) => {
     const { pokemonDetail } = usePokemon(id);
     
   return (

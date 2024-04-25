@@ -3,8 +3,7 @@
 import React from "react";
 import usePokemon from "@/hooks/usePokemon";
 
-export default function Title({ params }) {
-    const { id } = params;
+export default function Title({ id }) {
     const { pokemonDetail } = usePokemon(id);
 
   return (

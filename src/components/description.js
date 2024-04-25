@@ -1,8 +1,7 @@
 import usePokemon from "@/hooks/usePokemon";
 import React from "react";
 
-const description = ({ params }) => {
-    const { id } = params;
+const description = ({ id }) => {
     const { pokemonDetailSpesies } = usePokemon(id);
   return (
     <div>
