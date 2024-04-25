@@ -1,6 +1,9 @@
+// import usePokemon from "@/hooks/usePokemon";
 import React from "react";
 
 const searchBar = () => {
+  // const { pokemonData } = usePokemon();
+  
   return (
     <>
       <div className="mx-20 py-auto ">

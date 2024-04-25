@@ -14,7 +14,6 @@ module.exports = {
       backgroundColor: {
         'red-bg': '#DC0A2D',
         'grey-bg': '#efefef',
-
       },
       zIndex: {
         '2': '2',
