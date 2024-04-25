@@ -1,0 +1,3 @@
+progress::-webkit-progress-value{
+    background: var(--progress-value-background);
+}
