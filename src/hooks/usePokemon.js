@@ -1,11 +1,24 @@
 import { useEffect, useState } from 'react';
-import { getDetailData, getDetailDataSpecies, getPokemonData } from '@/services/pokeApi';
+import { getPokemonData } from '@/services/pokeApi';
 
-const usePokemon = (id) => {
+const usePokemon = () => {
     const [pokemonData, setPokemonData] = useState([]);
-    const [pokemonDetail, setPokemonDetail] = useState([]);
-    const [pokemonDetailSpesies, setPokemonDetailSpesies] = useState([]);
+    const [searchQuery, setSearchQuery] = useState('');
 
+    const handleSearchChange = (e) => {
+        setSearchQuery(e.target.value);
+      };
+      
+      const pokemonWithIds = pokemonData.map((pokemon, index) => ({
+        ...pokemon,
+        id: index + 1
+      }));
+    
+      const filteredPokemon = pokemonWithIds.filter((pokemon) =>
+        pokemon.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        pokemon.id.toString().padStart(3, '0').includes(searchQuery.toLowerCase())
+      );
+    
     useEffect(() => {
         const getData = async () => {
             try {
@@ -16,30 +29,11 @@ const usePokemon = (id) => {
             }
         };
 
-        const getDetail = async () => {
-            try {
-                const detailData = await getDetailData(id);
-                setPokemonDetail(detailData);
-            } catch (error) {
-                console.log(error);
-            }
-        };
+        getData()
 
-        const getDetailSpecies = async () => {
-            try {
-                const detailSpesies = await getDetailDataSpecies(id);
-                setPokemonDetailSpesies(detailSpesies);
-            } catch (error) {
-                console.log(error);
-            }
-        }
+    }, []);
 
-        getData(),
-        getDetail(),
-        getDetailSpecies()
-    }, [id]);
-
-    return { pokemonData, pokemonDetail, pokemonDetailSpesies };
+    return { pokemonData, searchQuery, handleSearchChange, filteredPokemon };
 };
 
 export default usePokemon;

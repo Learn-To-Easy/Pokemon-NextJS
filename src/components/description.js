@@ -1,8 +1,8 @@
-import usePokemon from "@/hooks/usePokemon";
+import usePokemonSpecies from "@/hooks/usePokemonSpecies";
 import React from "react";
 
 const description = ({ id }) => {
-    const { pokemonDetailSpesies } = usePokemon(id);
+    const { pokemonDetailSpesies } = usePokemonSpecies(id);
   return (
     <div>
       {pokemonDetailSpesies.flavor_text_entries &&

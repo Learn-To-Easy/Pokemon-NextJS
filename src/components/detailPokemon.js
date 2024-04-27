@@ -1,8 +1,8 @@
-import usePokemon from '@/hooks/usePokemon';
+import usePokemonDetail from '@/hooks/usePokemonDetail';
 import React from 'react'
 
 const detailPokemon = ({id}) => {
-    const { pokemonDetail } = usePokemon(id);
+    const { pokemonDetail } = usePokemonDetail(id);
 
   return (
     <div className="flex items-end mt-8">

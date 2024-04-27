@@ -1,9 +1,9 @@
-import usePokemon from '@/hooks/usePokemon';
+import usePokemonDetail from '@/hooks/usePokemonDetail';
 import React from 'react'
 import { statChangeName, typeColors } from '@/utils/pokemon';
 
 const statsPokemon = ({ id }) => {
-    const { pokemonDetail } = usePokemon(id);
+    const { pokemonDetail } = usePokemonDetail(id);
     
   return (
     <div>
