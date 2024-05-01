@@ -6,7 +6,7 @@ import usePokemon from '@/hooks/usePokemon';
 import Image from "next/image";
 
 export default function list() {
-  const { filteredPokemon, searchQuery, handleSearchChange, isLoading, isNotFound } = usePokemon();
+  const { filteredPokemon, searchQuery, handleSearchChange, isLoading } = usePokemon();
 
   return (
     <>
