@@ -1,8 +1,8 @@
-import usePokemon from "@/hooks/usePokemon";
+import usePokemonDetail from "@/hooks/usePokemonDetail";
 import React from "react";
 
 const imageDetail = ({ id }) => {
-    const { pokemonDetail } = usePokemon(id);
+    const { pokemonDetail } = usePokemonDetail(id);
 
   return (
     <div className="relative m-auto mt-10 w-52 h-52">

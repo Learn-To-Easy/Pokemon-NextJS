@@ -1,10 +1,10 @@
 "use client";
 
 import React from "react";
-import usePokemon from "@/hooks/usePokemon";
+import usePokemonDetail from "@/hooks/usePokemonDetail";
 
 export default function Title({ id }) {
-    const { pokemonDetail } = usePokemon(id);
+    const { pokemonDetail } = usePokemonDetail(id);
 
   return (
     <>

@@ -1,9 +1,9 @@
-import usePokemon from "@/hooks/usePokemon";
+import usePokemonDetail from "@/hooks/usePokemonDetail";
 import React from "react";
 import { typeColors } from '@/utils/pokemon';
 
 const typePokemon = ({id}) => {
-    const { pokemonDetail } = usePokemon(id);
+    const { pokemonDetail } = usePokemonDetail(id);
 
   return (
     <div className="flex flex-wrap items-center justify-center gap-4">

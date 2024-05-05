@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import styles from './style.css';
-import usePokemon from "@/hooks/usePokemon";
+import usePokemonDetail from "@/hooks/usePokemonDetail";
 import Title from '@/components/title';
 import ImageDetail from '@/components/imageDetail';
 import TypePokemon from '@/components/typePokemon';
@@ -14,7 +14,7 @@ import { typeColors } from '@/utils/pokemon';
 
 export default function Pokemon({ params }) {
   const { id } = params;
-  const { pokemonDetail } = usePokemon(id);
+  const { pokemonDetail } = usePokemonDetail(id);
 
   return (
     <>
